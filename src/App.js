@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-// import { Player } from 'video-react';
+import { Player } from 'video-react';
 import './App.css';
 
 function App() {
@@ -80,11 +80,15 @@ function App() {
           <>
             <div className='videos'>
               <div className='video'>
-                <video  src={`${backAddress}/video1/sdfsdfdsf_ouput.webm`} controls={true} />
+                <Player>
+                  <source src={`${backAddress}/video/mltce_ouput.webm`} controls={true} />
+                </Player>
               </div>
               <div className='video'>
-                <video src={`${backAddress}/video1/sdfsdfdsf_mask_ouput.webm`} controls={true} />
-              </div>
+                <Player>
+                  <source src={`${backAddress}/video/mltce_mask_ouput.webm`} controls={true} />
+                </Player>
+              </div> 
             </div> 
             <button style={{marginTop: '20px'}} onClick={() => startTwoVideo()}>Play two video together</button>
           </>
@@ -92,11 +96,15 @@ function App() {
           <>
             <div className='videos' >
               <div className='video'>
-                <video src={`${backAddress}/video1/${link.mainFile}`} controls={true} />
+                <Player>
+                  <source src={`${backAddress}/video/${link.mainFile}`} controls={true} />
+                </Player>
                 {info && <h4>{"total: " + info.total + ", enter: " + info.enter + ", exit: " + info.exit  }</h4>}
               </div>
               <div className='video'>
-                <video src={`${backAddress}/video1/${link.mask}`} controls={true} />
+                <Player>
+                  <source src={`${backAddress}/video/${link.mask}`} controls={true} />
+                </Player>
               </div>
             </div>
             <button style={{marginTop: '20px'}} onClick={() => startTwoVideo()}>Play two video together</button>
