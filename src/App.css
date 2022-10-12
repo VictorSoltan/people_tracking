@@ -1,38 +1,66 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  align-items: center;
+}
+.videos{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.video{
+ width: 45%;   
+}
+video{
+ width: 100%;   
+}
+.together{
+  margin-top: 20px;
+}
+form{
+  margin-top: 4%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes rotate {
   from {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  to { 
+      transform: rotate(360deg);
   }
+}
+
+
+@-webkit-keyframes rotate {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to { 
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+.load {
+width: 100px;
+height: 100px;
+margin: 20px auto 0;
+border: solid 10px #0f0835;
+border-radius: 50%;
+border-right-color: transparent;
+border-bottom-color: transparent;
+-webkit-transition: all 0.5s;
+-webkit-animation-name:             rotate; 
+-webkit-animation-duration:         1.0s; 
+-webkit-animation-iteration-count:  infinite;
+-webkit-animation-timing-function: linear;
+    
+transition: all 0.5s;
+animation-name:             rotate; 
+animation-duration:         1.0s; 
+animation-iteration-count:  infinite;
+animation-timing-function:  linear; 
 }
